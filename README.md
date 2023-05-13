@@ -2,16 +2,6 @@ The AirBnB Clone Project
 
 
 
-Project Description
-
-This is the first part of the AirBnB clone project where we worked on the backend of the project whiles interfacing it with a console application with the help of the cmd module in python.
-
-
-
-Data (python objects) generated are stored in a json file and can be accessed with the help of the json module in python
-
-
-
 Description of the command interpreter:
 
 The interface of the application is just like the Bash shell except that this has a limited number of accepted commands that were solely defined for the purposes of the usage of the AirBnB website.
@@ -57,10 +47,6 @@ You will need to clone the repository of the project from Github. This will cont
 
 
 
-git clone https://github.com/jzamora5/AirBnB_clone.git
-
-After cloning the repository you will have a folder called AirBnB_clone. In here there will be several files that allow the program to work.
-
 
 
 /console.py : The main executable of the project, the command interpreter.
@@ -68,7 +54,6 @@ After cloning the repository you will have a folder called AirBnB_clone. In here
 
 
 models/engine/file_storage.py: Class that serializes instances to a JSON file and deserializes JSON file to instances
-
 
 
 models/__ init __.py: A unique FileStorage instance for the application
@@ -194,93 +179,3 @@ In Interactive Mode the commands will need to be written with a keyboard when th
 Arguments
 
 Most commands have several options or arguments that can be used when executing the program. In order for the Shell to recognize those parameters, the user must separate everything with spaces.
-
-
-
-Example:
-
-
-
-
-
-user@ubuntu:~/AirBnB$ ./console.py
-
-(hbnb) create BaseModel
-
-49faff9a-6318-451f-87b6-910505c55907
-
-user@ubuntu:~/AirBnB$ ./console.py
-
-
-
-or
-
-
-
-user@ubuntu:~/AirBnB$ ./console.py $ echo "create BaseModel" | ./console.py
-
-(hbnb)
-
-e37ebcd3-f8e1-4c1f-8095-7a019070b1fa
-
-(hbnb)
-
-user@ubuntu:~/AirBnB$ ./console.py
-
-Available commands and what they do
-
-The recognizable commands by the interpreter are the following:
-
-
-
-Command		 Description
-
-quit or EOF	 Exits the program
-
-Usage	By itself
-
------	-----
-
-help	Provides a text describing how to use a command.
-
-Usage	By itself --or-- help <command>
-
------	-----
-
-create	Creates a new instance of a valid Class, saves it (to the JSON file) and prints the id. Valid classes are: BaseModel, User, State, City, Amenity, Place, Review.
-
-Usage	create <class name>
-
------	-----
-
-show	Prints the string representation of an instance based on the class name and id
-
-Usage	show <class name> <id> --or-- <class name>.show(<id>)
-
------	-----
-
-destroy	Deletes an instance based on the class name and id (saves the change into a JSON file).
-
-Usage	destroy <class name> <id> --or-- .destroy()
-
------	-----
-
-all	Prints all string representation of all instances based or not on the class name.
-
-Usage	By itself or all <class name> --or-- <class name>.all()
-
------	-----
-
-update	Updates an instance based on the class name and id by adding or updating attribute (saves the changes into a JSON file).
-
-Usage	update <class name> <id> <attribute name> "<attribute value>" ---or--- <class name>.update(<id>, <attribute name>, <attribute value>) --or-- <class name>.update(<id>, <dictionary representation>)
-
------	-----
-
-count	Retrieve the number of instances of a class.
-
-Usage	<class name>.count()
-
-Author
-
-Benjamin Musyoki, and musaabmoha
